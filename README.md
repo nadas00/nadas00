@@ -11,12 +11,10 @@ class _WelcomeState extends State<Welcome> {
 ```
 
 ```python
-with open('Welcome.txt', 'w') as file:
-    file.write('and also Python')
-
-with open('Welcome.txt', 'r') as file:
-    text = file.read()
-    print(text)
+with open('Welcome.txt', 'w+') as file:
+    file.write('and Also Python\n')
+    file.seek(0)
+    print(file.read())
 ```
 
 <!--
